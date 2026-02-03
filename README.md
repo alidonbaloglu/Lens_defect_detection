@@ -10,16 +10,18 @@ Lens üretiminde yüzey hatalarının (çizik, siyah nokta vb.) otomatik tespiti
 - **Otomatik Veri Toplama**: Focus taraması ile optimum görüntü yakalama
 - **YOLO & Mask R-CNN**: Alternatif model eğitimi ve değerlendirme
 
-## 🛠️ Kurulum
+---
 
-### 1. Gereksinimler
-- Windows 10/11 64-bit
-- Python 3.10 veya 3.11
-- NVIDIA GPU + CUDA (önerilen)
+## 🚀 Hızlı Başlangıç (Yeni Kullanıcılar İçin)
 
-### 2. Sanal Ortam
+### 1. Depoyu Klonlayın
 ```powershell
-cd "C:\Users\ali.donbaloglu\Desktop\Lens"
+git clone https://github.com/alidonbaloglu/Lens_defect_detection.git
+cd Lens_defect_detection
+```
+
+### 2. Sanal Ortam Oluşturun
+```powershell
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 ```
@@ -27,70 +29,127 @@ python -m venv .venv
 ### 3. PyTorch Kurulumu
 CUDA sürümünüze uygun PyTorch kurun:
 ```powershell
-# CUDA 12.6 için
+# CUDA 12.6 için (GPU kullanımı için önerilir)
 pip install torch torchvision --index-url https://download.pytorch.org/whl/cu126
 
-# CPU için
+# Sadece CPU için
 pip install torch torchvision
 ```
 
-### 4. Bağımlılıklar
+### 4. Bağımlılıkları Yükleyin
 ```powershell
 pip install -r requirements.txt
 ```
 
+---
+
+## 📦 Eksik Dosyalar ve Nasıl Elde Edilir
+
+GitHub'da depo boyutu sınırlamaları nedeniyle aşağıdaki dosyalar paylaşılmamıştır:
+
+### 🗂️ Veri Setleri (`datasetler/`)
+
+Veri setleri Roboflow üzerinden indirilebilir veya kendi verilerinizi oluşturabilirsiniz:
+
+**Roboflow'dan İndirme:**
+```python
+from roboflow import Roboflow
+rf = Roboflow(api_key="YOUR_API_KEY")
+project = rf.workspace("YOUR_WORKSPACE").project("YOUR_PROJECT")
+dataset = project.version(1).download("yolov8")
+```
+
+**Manuel Veri Seti Yapısı (YOLO formatı):**
+```
+datasetler/
+└── your_dataset/
+    ├── train/
+    │   ├── images/
+    │   └── labels/
+    ├── valid/
+    │   ├── images/
+    │   └── labels/
+    └── data.yaml
+```
+
+### 🤖 Model Dosyaları
+
+Model dosyaları (~45GB) paylaşılmamıştır. İki seçeneğiniz var:
+
+**Seçenek A: Modelleri Kendiniz Eğitin**
+```powershell
+# RT-DETR eğitimi
+python rtdetr_train_v3.py
+
+# YOLO eğitimi
+python yolo11_train.py
+```
+
+**Seçenek B: Önceden Eğitilmiş Modelleri İndirin**
+
+Modeller için iletişime geçin veya aşağıdaki klasör yapısını oluşturun:
+```
+RT_Detr_Ensemble/
+└── model/
+    ├── best_cizik.pt        # Çizik tespit modeli
+    └── best_siyahnokta.pt   # Siyah nokta tespit modeli
+```
+
+### 📁 Oluşturmanız Gereken Klasörler
+```powershell
+# Gerekli klasörleri oluşturun
+mkdir -p datasetler
+mkdir -p Modeller
+mkdir -p RT_Detr_Ensemble/model
+mkdir -p results
+mkdir -p training_plots
+```
+
+---
+
 ## 📁 Proje Yapısı
 
 ```
-Lens/
+Lens_defect_detection/
 ├── kamera/                          # Kamera uygulamaları
-│   ├── data_collector_qt_ensemble.py   # Ana veri toplama uygulaması (RT-DETR Ensemble)
-│   ├── camera_ayar.py                  # Kamera ayarları
-│   └── results/                        # Toplanan veriler
+│   ├── data_collector_qt_ensemble.py   # Ana veri toplama uygulaması
+│   └── camera_ayar.py                  # Kamera ayarları
 │
-├── RT_Detr_Ensemble/               # RT-DETR Ensemble modeli
-│   ├── model/
-│   │   ├── best_cizik.pt              # Çizik tespit modeli
-│   │   └── best_siyahnokta.pt         # Siyah nokta tespit modeli
+├── RT_Detr_Ensemble/               # RT-DETR Ensemble (model/ klasörü eksik)
 │   └── ensemble_test.py               # Ensemble test scripti
 │
-├── Modeller/                       # Eğitilmiş model dosyaları
-├── datasetler/                     # Eğitim veri setleri (COCO/YOLO format)
-├── results/                        # Analiz sonuçları
-├── training_plots/                 # Eğitim grafikleri
+├── Model_test/                     # Test scriptleri
+│   ├── Eski/                          # Eski test dosyaları
+│   └── Yeni/                          # Yeni test dosyaları
+│
+├── Mask_RCNN/                      # Matterport Mask R-CNN
+├── RT_DETR/                        # RT-DETR eğitim dosyaları
 │
 ├── rtdetr_train_v3.py              # RT-DETR model eğitimi
 ├── yolo11_train.py                 # YOLO model eğitimi
 ├── mask_rcnn_coco.py               # Mask R-CNN eğitimi
-├── mask_rcnn_infer.py              # Mask R-CNN çıkarım
 │
 ├── requirements.txt                # Python bağımlılıkları
 └── README.md                       # Bu dosya
 ```
 
-## 🚀 Kullanım
+---
 
-### Veri Toplama Uygulaması (RT-DETR Ensemble)
+## 🎯 Kullanım
+
+### Veri Toplama Uygulaması (Kamera Gerektirir)
 ```powershell
 python kamera/data_collector_qt_ensemble.py
 ```
 
-**Özellikler:**
-- 4 kamera canlı görüntüsü (üst satır)
-- Gerçek zamanlı hata tespiti (alt satır)
-- Sol/Sağ parça seçimi ile kamera ayarları
-- Focus taraması ile otomatik görüntü yakalama
-- CSV formatında tespit sonuçları
-
-**Kısayollar:**
-- `Kaydet`: Tüm kameralardan görüntü yakala ve analiz et
-- `Sonraki Part`: Yeni parça klasörü oluştur
-- `Kayıtları Analiz Et`: Kaydedilmiş görüntüleri toplu analiz et
+> ⚠️ **Not**: Bu uygulama 4 USB kamera ve eğitilmiş model dosyalarını gerektirir.
 
 ### Model Eğitimi
 
 **RT-DETR Eğitimi:**
 ```powershell
+# Veri setinizi datasetler/ klasörüne koyun
+# rtdetr_train_v3.py içindeki yolları güncelleyin
 python rtdetr_train_v3.py
 ```
 
@@ -99,35 +158,42 @@ python rtdetr_train_v3.py
 python yolo11_train.py
 ```
 
-**Mask R-CNN Eğitimi:**
+### Test Scriptleri
 ```powershell
-cd Mask_RCNN
-pip install -e .
-cd ..
-python mask_rcnn_coco.py
+# Ensemble test
+python Model_test/Yeni/ensemble_gerçek_test_.py
+
+# YOLO test
+python Model_test/Yeni/yolo_test.py
 ```
 
-### Ensemble Ayarları
+---
 
-`kamera/data_collector_qt_ensemble.py` dosyasında:
+## ⚙️ Konfigürasyon
+
+### Model Yollarını Güncelleme
+
+`kamera/data_collector_qt_ensemble.py` dosyasında model yollarını kendi sisteminize göre güncelleyin:
+
 ```python
-# Eşik Değerleri
-DEFAULT_CONF_THRESHOLD = 0.40    # Güven eşiği
-NMS_IOU_THRESHOLD = 0.40         # NMS IoU eşiği
-
-# Model Ağırlıkları
-SCRATCH_MODEL_STRONG_WEIGHT = 1.0   # Çizik modeli çizik için
-SCRATCH_MODEL_WEAK_WEIGHT = 0.5     # Çizik modeli siyah nokta için
-BLACKDOT_MODEL_STRONG_WEIGHT = 1.0  # Siyah nokta modeli siyah nokta için
-BLACKDOT_MODEL_WEAK_WEIGHT = 0.5    # Siyah nokta modeli çizik için
+# Satır 25-26
+SCRATCH_MODEL_PATH = r"SIZIN_YOL/RT_Detr_Ensemble/model/best_cizik.pt"
+BLACKDOT_MODEL_PATH = r"SIZIN_YOL/RT_Detr_Ensemble/model/best_siyahnokta.pt"
 ```
 
-## 🎯 Ensemble Stratejisi
+### Eşik Değerleri
+```python
+DEFAULT_CONF_THRESHOLD = 0.40    # Güven eşiği (0.0-1.0)
+NMS_IOU_THRESHOLD = 0.40         # NMS IoU eşiği
+```
+
+---
+
+## 🎓 Ensemble Stratejisi
 
 1. Her iki modelden (çizik & siyah nokta) tahmin alınır
 2. Aynı konumdaki (IoU ≥ 0.4) aynı sınıf tespitleri birleştirilir
-3. Ağırlıklı ortalama ile ensemble güven skoru hesaplanır:
-   - Her model kendi güçlü sınıfında daha yüksek ağırlık alır
+3. Ağırlıklı ortalama ile ensemble güven skoru hesaplanır
 4. Eşik altındaki tespitler filtrelenir
 
 **Renk Kodları:**
@@ -135,29 +201,26 @@ BLACKDOT_MODEL_WEAK_WEIGHT = 0.5    # Siyah nokta modeli çizik için
 - 🟢 Yeşil: Sadece çizik modeli tespit etti
 - 🔵 Mavi: Sadece siyah nokta modeli tespit etti
 
-## ⚙️ Kamera Ayarları
+---
 
-Sol/Sağ parça için farklı kamera ayarları tanımlıdır:
-- Parlaklık, kontrast, doygunluk
-- Focus mesafesi
-- Beyaz dengesi
-- Keskinlik
-
-## 📊 Çıktılar
-
-- **Görüntüler**: `results/DataCollection/PartX/` klasöründe
-- **Analiz Sonuçları**: CSV formatında tespit detayları
-- **Eğitim Sonuçları**: `training_plots/` klasöründe
-
-## ❗ Sık Karşılaşılan Sorunlar
+## ❗ Sorun Giderme
 
 | Sorun | Çözüm |
 |-------|-------|
-| CUDA uyuşmazlığı | PyTorch'u CUDA sürümünüze uygun kurun |
-| Kamera açılmadı | DirectShow sürücülerini kontrol edin |
-| Model bulunamadı | `RT_Detr_Ensemble/model/` içindeki .pt dosyalarını kontrol edin |
-| `pycocotools` hatası | `pip install pycocotools-windows` |
+| `Model bulunamadı` | Model dosyalarını `RT_Detr_Ensemble/model/` içine koyun |
+| `CUDA uyuşmazlığı` | PyTorch'u CUDA sürümünüze uygun kurun |
+| `Kamera açılmadı` | USB kameraların bağlı olduğunu kontrol edin |
+| `pycocotools hatası` | `pip install pycocotools-windows` |
+| `mrcnn import hatası` | `cd Mask_RCNN && pip install -e .` |
 
-## 📫 İletişim
+---
+
+## 📧 İletişim
+
+Model dosyaları veya veri setleri için iletişime geçin.
+
+---
+
+## 📄 Lisans
 
 Bu proje özel kullanım içindir.
