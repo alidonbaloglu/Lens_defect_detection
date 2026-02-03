@@ -74,26 +74,28 @@ datasetler/
 
 ### 🤖 Model Dosyaları
 
-Model dosyaları (~45GB) paylaşılmamıştır. İki seçeneğiniz var:
+Model dosyaları Kaggle'dan indirilebilir:
 
-**Seçenek A: Modelleri Kendiniz Eğitin**
+**📥 Kaggle'dan İndirme:**
 ```powershell
-# RT-DETR eğitimi
-python rtdetr_train_v3.py
+# Kaggle CLI kurulumu
+pip install kaggle
 
-# YOLO eğitimi
-python yolo11_train.py
+# Modelleri indir
+kaggle datasets download -d alidonbalolu/lens-defect-detection-models
+unzip lens-defect-detection-models.zip -d RT_Detr_Ensemble/model/
 ```
 
-**Seçenek B: Önceden Eğitilmiş Modelleri İndirin**
+**Model Dataset Linki:** [kaggle.com/datasets/alidonbalolu/lens-defect-detection-models](https://www.kaggle.com/datasets/alidonbalolu/lens-defect-detection-models)
 
-Modeller için iletişime geçin veya aşağıdaki klasör yapısını oluşturun:
-```
-RT_Detr_Ensemble/
-└── model/
-    ├── best_cizik.pt        # Çizik tespit modeli
-    └── best_siyahnokta.pt   # Siyah nokta tespit modeli
-```
+İndirilen dosyalar:
+- `best_cizik.pt` - Çizik tespit modeli (RT-DETR)
+- `best_siyahnokta.pt` - Siyah nokta tespit modeli (RT-DETR)
+
+**Manuel İndirme:**
+1. Yukarıdaki linke gidin
+2. "Download" butonuna tıklayın
+3. Dosyaları `RT_Detr_Ensemble/model/` klasörüne çıkarın
 
 ### 📁 Oluşturmanız Gereken Klasörler
 ```powershell
