@@ -30,6 +30,18 @@ training_plots/
 results/
 *.log
 
+# ----- CometML ve Weights & Biases -----
+.cometml-runs/
+*/.cometml-runs/
+wandb/
+
+# ----- Ultralytics Runs -----
+RT_DETR/runs/
+RT_DETR/.cometml-runs/
+
+# ----- Büyük Zip Dosyaları -----
+*.zip
+
 # ----- Kamera Sonuçları -----
 kamera/results/
 
