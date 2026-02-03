@@ -1,0 +1,2 @@
+Faster RCNN şeffaf parçalar üzerindeki tespit performasını arttırmak için algoritmaya ne gibi özgün maddeler eklenebilir
+iki tane problem var, 1. şeffaf parça 2.küçük nesne tespiti

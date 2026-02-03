@@ -1,0 +1,111 @@
+# ========================================
+# Lens Projesi - Git Ignore
+# ========================================
+
+# ----- Veri Setleri (Büyük dosyalar) -----
+datasetler/
+datasets/
+
+# ----- Model Dosyaları ve Ağırlıkları -----
+Modeller/
+*.pt
+*.pth
+*.onnx
+*.weights
+*.h5
+*.hdf5
+*.pb
+*.tflite
+
+# ----- Model Test Klasörü -----
+# Dataset ve PARTLAR klasörleri hariç (büyük dosyalar)
+Model_test/Eski/dataset/
+Model_test/Eski/SONUCLAR/
+Model_test/Yeni/PARTLAR/
+Model_test/Yeni/ensemble_results/
+
+# ----- Eğitim Çıktıları -----
+runs/
+training_plots/
+results/
+*.log
+
+# ----- Kamera Sonuçları -----
+kamera/results/
+
+# ----- Python Sanal Ortam -----
+.venv/
+venv/
+env/
+ENV/
+
+# ----- Python Cache -----
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# ----- Jupyter Notebook -----
+.ipynb_checkpoints/
+*.ipynb
+
+# ----- IDE ve Editor -----
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+.settings/
+
+# ----- OS Dosyaları -----
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ----- Video ve Büyük Medya -----
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.wmv
+
+# ----- Geçici Dosyalar -----
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# ----- Mask R-CNN Build -----
+Mask_RCNN/build/
+Mask_RCNN/*.egg-info/
+
+# ----- TensorBoard Logs -----
+logs/
+tensorboard/
+
+# ----- RT-DETR Model Dosyaları (Model klasörü hariç tutulmuyor, sadece .pt dosyaları) -----
+# RT_Detr_Ensemble/model/*.pt dosyaları ağırlıklar olduğu için hariç
+
+# ----- Anomalib -----
+anomalib_results/
+
+# ----- Roboflow Cache -----
+.roboflow/

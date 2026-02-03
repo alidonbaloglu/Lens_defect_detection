@@ -1,0 +1,19 @@
+# RT-DETR Eğitim Gereksinimleri
+# Kurulum: pip install -r requirements.txt
+
+# Ultralytics (RT-DETR, YOLO)
+ultralytics>=8.0.0
+
+# PyTorch (CUDA destekli sürüm için pytorch.org'dan indirin)
+torch>=2.0.0
+torchvision>=0.15.0
+
+# Temel kütüphaneler
+numpy>=1.23.0
+opencv-python>=4.8.0
+Pillow>=9.4.0
+matplotlib>=3.7.0
+pyyaml>=6.0
+
+# Eğitim izleme (opsiyonel)
+tensorboard>=2.13.0

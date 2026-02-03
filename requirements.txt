@@ -1,0 +1,63 @@
+# ============================================
+# Lens Projesi - Python Gereksinimleri
+# RT-DETR, YOLO, Mask R-CNN, CNN ve araçlar için
+# ============================================
+
+# ----- Temel Bilimsel Kütüphaneler -----
+numpy
+scipy
+Pillow
+matplotlib
+pandas
+tqdm
+colorama
+
+# ----- Görüntü İşleme -----
+opencv-python
+scikit-image
+
+# ----- Derin Öğrenme Çerçeveleri -----
+# PyTorch ve TorchVision - CUDA sürümünüze uygun kurulmalı
+# Örnek: pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
+torch
+torchvision
+torchaudio
+
+# ----- Model Backbone ve Transformer -----
+timm                    # Swin Transformer, EfficientNet ve diğer modern backbone'ler
+transformers            # Hugging Face transformers (RT-DETR için)
+
+# ----- Object Detection Frameworkleri -----
+ultralytics             # YOLOv8/YOLOv11 ve RT-DETR için
+
+# ----- Veri Artırma (Augmentation) -----
+albumentations          # Gelişmiş veri artırma
+imgaug                  # Ek veri artırma teknikleri
+
+# ----- COCO Tools -----
+pycocotools-windows; sys_platform == "win32"
+pycocotools; sys_platform != "win32"
+
+
+# ----- Roboflow Entegrasyonu -----
+roboflow                # Veri yükleme ve model deploy
+
+# ----- Polygon/Shape İşlemleri -----
+shapely                 # Polygon IoU hesaplamaları için
+
+# ----- GUI -----
+PyQt5                   # Arayüz uygulamaları için
+
+# ----- PLC Haberleşme -----
+python-snap7            # Siemens PLC haberleşme
+
+# ----- Geliştirme Araçları -----
+ipython
+cython
+h5py                    # Model ağırlıkları için
+
+# ----- Opsiyonel: Loglama ve İzleme -----
+tensorboard             # Eğitim logları görselleştirme
+# wandb                 # Weights & Biases (isteğe bağlı)
+
+#pip3 install torch torchvision --index-url https://download.pytorch.org/whl/cu126

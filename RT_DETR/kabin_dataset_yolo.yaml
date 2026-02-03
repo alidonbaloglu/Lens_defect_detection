@@ -1,0 +1,16 @@
+# RT-DETR Kabin Dataset - YOLO Format
+# Mevcut YOLO dataset kullanılıyor
+
+path: C:/Users/ali.donbaloglu/Desktop/Lens/datasetler/Kabin_merged_yolo
+
+train: train/images
+val: valid/images
+test: test/images
+
+# Sınıf sayısı
+nc: 2
+
+# Sınıf isimleri
+names:
+  0: cizik
+  1: siyah_nokta
