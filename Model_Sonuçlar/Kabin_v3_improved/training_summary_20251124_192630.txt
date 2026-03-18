@@ -1,0 +1,77 @@
+================================================================================
+MASK R-CNN EĞİTİM SONUÇLARI (IMPROVED v3)
+================================================================================
+
+EĞİTİM KONFİGÜRASYONU:
+----------------------------------------
+Veri Seti: C:/Users/arge.ortak/Desktop/Lens/kabin_dataset_v1
+Backbone: resnet101
+Epoch Sayısı: 100
+Batch Size: 8
+Learning Rate: 0.0001
+Weight Decay: 0.0001
+Sınıf Sayısı: 4
+Train Örnek Sayısı: 3031
+Validation Örnek Sayısı: 338
+Test Örnek Sayısı: 348
+Seed: 42
+Cihaz: cuda
+Optimizer: AdamW (lr=0.0001, weight_decay=0.0001, betas=(0.9, 0.999))
+LR Scheduler: ReduceLROnPlateau (mode=max, factor=0.5, patience=5, min_lr=1e-07)
+PyTorch: 2.5.1+cu121, Torchvision: 0.20.1+cu121
+
+EĞİTİM SÜRESİ:
+----------------------------------------
+Başlangıç Zamanı: 2025-11-24 14:57:33
+Bitiş Zamanı: 2025-11-24 19:24:40
+Toplam Süre: 4:27:07.163361
+
+EN İYİ MODEL SONUÇLARI:
+================================================================================
+En İyi Epoch: 11
+Validation F1 Score: 0.4399
+Precision: 0.6256
+Recall: 0.6016
+IoU: 0.4424
+
+SINIF BAZLI METRIKLER:
+--------------------------------------------------------------------------------
+
+class_2:
+  Precision: 0.6684
+  Recall: 0.5258
+  F1 Score: 0.5886
+  IoU: 0.4170
+
+class_3:
+  Precision: 0.5493
+  Recall: 0.8497
+  F1 Score: 0.6672
+  IoU: 0.5006
+
+================================================================================
+TEST SETİ SONUÇLARI:
+================================================================================
+Test F1 Score: 0.5949
+Test Precision: 0.5984
+Test Recall: 0.5914
+Test IoU: 0.4234
+
+Test Seti Sınıf Bazlı Metrikler:
+--------------------------------------------------------------------------------
+
+class_2:
+  Precision: 0.5669
+  Recall: 0.6340
+  F1 Score: 0.5986
+  IoU: 0.4271
+
+class_3:
+  Precision: 0.5957
+  Recall: 0.5425
+  F1 Score: 0.5679
+  IoU: 0.3965
+
+================================================================================
+NOT: Bu sonuçlar otomatik olarak oluşturulmuştur.
+================================================================================

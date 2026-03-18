@@ -1,0 +1,75 @@
+================================================================================
+EĞİTİM TAMAMLANDI!
+================================================================================
+⏱️  Toplam süre: 1732.54 dakika
+📂 Sonuçlar: C:/Users/arge.ortak/Desktop/Lens/results/RTDETR\kabin_20251229_121419
+📂 Epoch logları: C:/Users/arge.ortak/Desktop/Lens/results/RTDETR\kabin_20251229_121419\epoch_logs
+✅ En iyi model: C:/Users/arge.ortak/Desktop/Lens/Modeller\RTDETR_kabin_BEST.pt
+✅ Son model: C:/Users/arge.ortak/Desktop/Lens/Modeller\RTDETR_kabin_LAST.pt
+
+================================================================================
+EN İYİ MODEL (BEST) DEĞERLENDİRME
+================================================================================
+🔍 Standart validation...
+Ultralytics 8.3.207  Python-3.12.10 torch-2.5.1+cu121 CUDA:0 (NVIDIA RTX A4500, 20470MiB)
+rt-detr-x summary: 370 layers, 65,471,546 parameters, 0 gradients, 222.5 GFLOPs
+val: Fast image access  (ping: 0.00.0 ms, read: 175.930.8 MB/s, size: 53.5 KB)
+val: Scanning C:\Users\arge.ortak\Desktop\Lens\Kabin_merged_yolov2\valid\labels.cache... 764 images, 124 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 764/764 802.5Kit/s 0.0s       
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 48/48 1.6it/s 30.6s
+                   all        764       1994      0.727       0.65       0.69      0.299
+Speed: 0.2ms preprocess, 37.7ms inference, 0.0ms loss, 0.3ms postprocess per image
+Results saved to C:\Users\arge.ortak\Desktop\Lens\RT_DETR\runs\detect\val
+   mAP50: 0.6904
+   mAP50-95: 0.2990
+   Precision: 0.7273
+   Recall: 0.6497
+
+🔍 mAP@0.25 hesaplanıyor...
+Ultralytics 8.3.207  Python-3.12.10 torch-2.5.1+cu121 CUDA:0 (NVIDIA RTX A4500, 20470MiB)
+rt-detr-x summary: 370 layers, 65,471,546 parameters, 0 gradients, 222.5 GFLOPs
+val: Fast image access  (ping: 0.00.0 ms, read: 165.949.4 MB/s, size: 51.6 KB)
+val: Scanning C:\Users\arge.ortak\Desktop\Lens\Kabin_merged_yolov2\valid\labels.cache... 764 images, 124 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 764/764  0.0s
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 48/48 1.6it/s 29.7s
+                   all        764       1994      0.727       0.65       0.69      0.299
+Speed: 0.2ms preprocess, 37.5ms inference, 0.0ms loss, 0.3ms postprocess per image
+   ✅ mAP@0.25: 0.6904
+      mAP50: 0.6904
+      mAP50-95: 0.2990
+      Precision: 0.7273
+      Recall: 0.6497
+   mAP@0.25: 0.6904
+
+================================================================================
+SON MODEL (LAST) DEĞERLENDİRME
+================================================================================
+🔍 Standart validation...
+Ultralytics 8.3.207  Python-3.12.10 torch-2.5.1+cu121 CUDA:0 (NVIDIA RTX A4500, 20470MiB)
+rt-detr-x summary: 370 layers, 65,471,546 parameters, 0 gradients, 222.5 GFLOPs
+val: Fast image access  (ping: 0.00.0 ms, read: 202.727.9 MB/s, size: 58.3 KB)
+val: Scanning C:\Users\arge.ortak\Desktop\Lens\Kabin_merged_yolov2\valid\labels.cache... 764 images, 124 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 764/764  0.0s
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 48/48 1.6it/s 30.4s
+                   all        764       1994      0.739       0.62      0.648      0.279
+Speed: 0.2ms preprocess, 37.6ms inference, 0.0ms loss, 0.3ms postprocess per image
+Results saved to C:\Users\arge.ortak\Desktop\Lens\RT_DETR\runs\detect\val3
+   mAP50: 0.6484
+   mAP50-95: 0.2791
+   Precision: 0.7390
+   Recall: 0.6196
+
+🔍 mAP@0.25 hesaplanıyor...
+Ultralytics 8.3.207  Python-3.12.10 torch-2.5.1+cu121 CUDA:0 (NVIDIA RTX A4500, 20470MiB)
+rt-detr-x summary: 370 layers, 65,471,546 parameters, 0 gradients, 222.5 GFLOPs
+val: Fast image access  (ping: 0.00.0 ms, read: 157.329.7 MB/s, size: 55.5 KB)
+val: Scanning C:\Users\arge.ortak\Desktop\Lens\Kabin_merged_yolov2\valid\labels.cache... 764 images, 124 backgrounds, 0 corrupt: 100% ━━━━━━━━━━━━ 764/764  0.0s
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100% ━━━━━━━━━━━━ 48/48 1.6it/s 29.8s
+                   all        764       1994      0.739       0.62      0.648      0.279
+Speed: 0.2ms preprocess, 37.7ms inference, 0.0ms loss, 0.3ms postprocess per image
+   ✅ mAP@0.25: 0.6484
+      mAP50: 0.6484
+      mAP50-95: 0.2791
+      Precision: 0.7390
+      Recall: 0.6196
+   mAP@0.25: 0.6484
+✅ Eğitim sonuçları kaydedildi:
+   JSON: C:/Users/arge.ortak/Desktop/Lens/results/RTDETR\kabin_20251229_121419\training_results_20251230_171001.json
+   TXT:  C:/Users/arge.ortak/Desktop/Lens/results/RTDETR\kabin_20251229_121419\training_summary_20251230_171001.txt

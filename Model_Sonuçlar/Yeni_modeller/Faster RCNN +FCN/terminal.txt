@@ -1,0 +1,22 @@
+Fasterrcnn +fcn
+
+============================================================
+FINAL EVALUATION RESULTS
+============================================================
+
+📊 SEGMENTATION METRICS:
+  Mean Precision: 0.5617
+  Mean Recall: 0.5024
+  Mean F1-Score: 0.5275
+  Mean IoU (mIoU): 0.3582
+
+  Per-Class Metrics:
+    cizik: P=0.6025, R=0.4645, F1=0.5246, IoU=0.3555
+    siyah_nokta: P=0.5209, R=0.5403, F1=0.5304, IoU=0.3609
+
+📦 DETECTION METRICS:
+  mAP@0.25: 0.5886
+
+  Per-Class AP:
+    cizik: AP=0.5942
+    siyah_nokta: AP=0.5830

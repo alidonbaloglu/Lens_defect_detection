@@ -1,0 +1,52 @@
+{
+  "confusion_matrix": [
+    [
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      109,
+      10,
+      47
+    ],
+    [
+      0,
+      3,
+      652,
+      128
+    ],
+    [
+      0,
+      0,
+      0,
+      0
+    ]
+  ],
+  "metrics": {
+    "ciizk-vzt8": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "support": 0
+    },
+    "cizik": {
+      "precision": 0.9732142857142857,
+      "recall": 0.6566265060240963,
+      "f1_score": 0.7841726618705035,
+      "support": 166
+    },
+    "siyah_nokta": {
+      "precision": 0.9848942598187311,
+      "recall": 0.8326947637292464,
+      "f1_score": 0.9024221453287196,
+      "support": 783
+    }
+  },
+  "config": {
+    "iou_threshold": 0.5,
+    "conf_threshold": 0.5
+  }
+}

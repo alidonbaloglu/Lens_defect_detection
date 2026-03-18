@@ -1,0 +1,37 @@
+================================================================================
+RT-DETR EĞİTİM SONUÇLARI
+================================================================================
+
+EĞİTİM KONFİGÜRASYONU:
+----------------------------------------
+Model: rtdetr-l.pt
+Veri Seti: C:/Users/arge.ortak/Desktop/Lens/Kabin_merged_yolo
+Epoch Sayısı: 100
+Batch Size: 8
+Image Size: 1000
+Learning Rate: 0.0001
+Weight Decay: 0.0001
+Patience: 50
+Sınıf Sayısı: 2
+Augmentation: Aktif
+Cihaz: cuda
+GPU: NVIDIA RTX A4500
+
+EĞİTİM SÜRESİ:
+----------------------------------------
+Başlangıç: 2025-12-25 17:55:03
+Bitiş: 2025-12-25 22:59:25
+Toplam Süre: 304.37 dakika
+
+EN İYİ MODEL SONUÇLARI:
+================================================================================
+En İyi Epoch: -
+mAP50: 0.4697
+mAP50-95: 0.2053
+Precision: 0.5774
+Recall: 0.3918
+
+
+================================================================================
+NOT: Bu sonuçlar otomatik olarak oluşturulmuştur.
+================================================================================

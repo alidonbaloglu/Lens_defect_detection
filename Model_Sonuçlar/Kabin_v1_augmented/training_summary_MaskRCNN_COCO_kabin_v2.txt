@@ -1,0 +1,107 @@
+================================================================================
+MASK R-CNN EĞİTİM SONUÇLARI
+================================================================================
+
+EĞİTİM KONFİGÜRASYONU:
+----------------------------------------
+Veri Seti: C:/Users/arge.ortak/Desktop/Lens/kabin_dataset_v1
+Backbone: resnet101
+Epoch Sayısı: 100
+Batch Size: 4
+Learning Rate: 0.0001
+Weight Decay: 0.0001
+Sınıf Sayısı: 4
+Train Örnek Sayısı: 3031
+Validation Örnek Sayısı: 338
+Test Örnek Sayısı: 348
+Seed: 42
+Cihaz: cuda
+Optimizer: AdamW (lr=7.272682546199037e-05, weight_decay=0.0001, betas=(0.9, 0.999))
+LR Scheduler: SequentialLR
+PyTorch: 2.5.1+cu121, Torchvision: 0.20.1+cu121
+
+EĞİTİM SÜRESİ:
+----------------------------------------
+Başlangıç Zamanı: 2025-11-20 12:06:19
+Bitiş Zamanı: 2025-11-20 14:44:14
+Toplam Süre: 157.92 dakika
+Epoch Başına Ortalama: 6.87 dakika
+
+EĞİTİM İLERLEMESİ:
+----------------------------------------
+Tamamlanan Epoch: 23
+En İyi Validation F1: 0.4457
+En İyi Epoch: 15
+Early Stopping: Evet
+
+FİNAL METRİKLER:
+----------------------------------------
+VALIDATION SET:
+  Precision: 0.6530
+  Recall: 0.6181
+  F1-Score: 0.6351
+  IoU: 0.4653
+  (TTA) Precision: 0.5552
+  (TTA) Recall: 0.6916
+  (TTA) F1-Score: 0.6160
+  (TTA) IoU: 0.4450
+
+TEST SET:
+  Precision: 0.6280
+  Recall: 0.5256
+  F1-Score: 0.5722
+  IoU: 0.4008
+  (TTA) Precision: 0.4998
+  (TTA) Recall: 0.6377
+  (TTA) F1-Score: 0.5604
+  (TTA) IoU: 0.3893
+
+LOSS GEÇMİŞİ (Son 5 Epoch):
+----------------------------------------
+Epoch 19: Total Loss = 0.3664
+  loss_classifier: 0.0233
+  loss_box_reg: 0.0593
+  loss_mask: 0.2445
+  loss_objectness: 0.0057
+  loss_rpn_box_reg: 0.0335
+
+Epoch 20: Total Loss = 0.3601
+  loss_classifier: 0.0218
+  loss_box_reg: 0.0558
+  loss_mask: 0.2441
+  loss_objectness: 0.0059
+  loss_rpn_box_reg: 0.0325
+
+Epoch 21: Total Loss = 0.3476
+  loss_classifier: 0.0204
+  loss_box_reg: 0.0537
+  loss_mask: 0.2382
+  loss_objectness: 0.0052
+  loss_rpn_box_reg: 0.0301
+
+Epoch 22: Total Loss = 0.3422
+  loss_classifier: 0.0205
+  loss_box_reg: 0.0535
+  loss_mask: 0.2360
+  loss_objectness: 0.0046
+  loss_rpn_box_reg: 0.0275
+
+Epoch 23: Total Loss = 0.3338
+  loss_classifier: 0.0190
+  loss_box_reg: 0.0510
+  loss_mask: 0.2319
+  loss_objectness: 0.0049
+  loss_rpn_box_reg: 0.0270
+
+MODEL DOSYASI:
+----------------------------------------
+Kayıt Yeri: Modeller\MaskRCNN_COCO_kabin_v2.pt
+Dosya Boyutu: 240.85 MB
+Mimari: MaskRCNN(resnet101)
+Toplam Parametre: 62,873,063
+Eğitilebilir Parametre: 62,863,655
+Eğitilemez Parametre: 9,408
+
+================================================================================
+Eğitim tamamlandı!
+================================================================================

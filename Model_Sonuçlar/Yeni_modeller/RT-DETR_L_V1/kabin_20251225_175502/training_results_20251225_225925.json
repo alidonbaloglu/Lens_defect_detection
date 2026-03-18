@@ -1,0 +1,33 @@
+{
+  "config": {
+    "model": "rtdetr-l.pt",
+    "dataset_path": "C:/Users/arge.ortak/Desktop/Lens/Kabin_merged_yolo",
+    "num_epochs": 100,
+    "batch_size": 8,
+    "image_size": 1000,
+    "learning_rate": 0.0001,
+    "weight_decay": 0.0001,
+    "patience": 50,
+    "num_classes": 2,
+    "augmentation": true,
+    "device": "cuda",
+    "gpu_name": "NVIDIA RTX A4500",
+    "seed": 42
+  },
+  "training_time": {
+    "start_time": "2025-12-25 17:55:03",
+    "end_time": "2025-12-25 22:59:25",
+    "total_duration": "304.37 dakika"
+  },
+  "best_results": {
+    "map50": 0.46968126166543966,
+    "map50_95": 0.2052783393436597,
+    "precision": 0.5773769777761335,
+    "recall": 0.3917936541070869
+  },
+  "model_paths": {
+    "best": "C:/Users/arge.ortak/Desktop/Lens/Modeller\\RTDETR_kabin_BEST.pt",
+    "last": "C:/Users/arge.ortak/Desktop/Lens/Modeller\\RTDETR_kabin_LAST.pt",
+    "run_dir": "C:/Users/arge.ortak/Desktop/Lens/results/RTDETR\\kabin_20251225_175502"
+  }
+}

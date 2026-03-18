@@ -1,0 +1,54 @@
+================================================================================
+MASK R-CNN EĞİTİM SONUÇLARI (IMPROVED v3)
+================================================================================
+
+EĞİTİM KONFİGÜRASYONU:
+----------------------------------------
+Veri Seti: C:/Users/arge.ortak/Desktop/Lens/Kabin_merged_v1
+Backbone: resnet101
+Epoch Sayısı: 100
+Batch Size: 4
+Learning Rate: 0.0001
+Weight Decay: 0.0001
+Sınıf Sayısı: 3
+Train Örnek Sayısı: 5244
+Validation Örnek Sayısı: 617
+Test Örnek Sayısı: 637
+Seed: 42
+Cihaz: cuda
+Optimizer: AdamW (lr=0.0001, weight_decay=0.0001, betas=(0.9, 0.999))
+LR Scheduler: ReduceLROnPlateau (mode=max, factor=0.5, patience=5, min_lr=1e-07)
+PyTorch: 2.5.1+cu121, Torchvision: 0.20.1+cu121
+
+EĞİTİM SÜRESİ:
+----------------------------------------
+Başlangıç Zamanı: 2025-12-22 16:25:33
+Bitiş Zamanı: 2025-12-22 23:21:58
+Toplam Süre: 6:56:25.215059
+
+EN İYİ MODEL SONUÇLARI:
+================================================================================
+En İyi Epoch: 9
+Validation F1 Score: 0.4760
+Precision: 0.6980
+Recall: 0.5256
+IoU: 0.4282
+
+SINIF BAZLI METRIKLER:
+--------------------------------------------------------------------------------
+
+class_1:
+  Precision: 0.6911
+  Recall: 0.4456
+  F1 Score: 0.5418
+  IoU: 0.3716
+
+class_2:
+  Precision: 0.6785
+  Recall: 0.7381
+  F1 Score: 0.7071
+  IoU: 0.5469
+
+================================================================================
+NOT: Bu sonuçlar otomatik olarak oluşturulmuştur.
+================================================================================

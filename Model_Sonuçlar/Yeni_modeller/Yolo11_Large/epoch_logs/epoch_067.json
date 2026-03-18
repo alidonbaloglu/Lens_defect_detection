@@ -1,0 +1,10 @@
+{
+  "epoch": 67,
+  "train_loss": 1.0413055419921875,
+  "val_map50": 0.51261,
+  "val_map50_95": 0.19331,
+  "val_precision": 0.64074,
+  "val_recall": 0.5024,
+  "learning_rate": 0.0009408548,
+  "epoch_time": 149.61907267570496
+}

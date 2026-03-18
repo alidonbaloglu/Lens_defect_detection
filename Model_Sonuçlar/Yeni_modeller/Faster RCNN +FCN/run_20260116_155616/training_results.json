@@ -1,0 +1,70 @@
+{
+  "training": {
+    "epochs": 100,
+    "best_val_loss": 0.7727011029536908,
+    "final_train_loss": {
+      "loss_total": 0.34517270615023954,
+      "loss_det": 0.14213523885575674,
+      "loss_seg": 0.20303746913709947
+    },
+    "final_val_loss": {
+      "loss_total": 0.9842068186173072,
+      "loss_det": 0.7327944154922779,
+      "loss_seg": 0.25141239395508397
+    }
+  },
+  "segmentation": {
+    "mean_precision": 0.5617138902579111,
+    "mean_recall": 0.5024099023911147,
+    "mean_f1": 0.5275069927047021,
+    "mean_iou": 0.35824610446560895,
+    "per_class": {
+      "class_1": {
+        "precision": 0.6025433850909857,
+        "recall": 0.46448398191025536,
+        "f1": 0.5245821418194607,
+        "iou": 0.35554818515370745
+      },
+      "class_2": {
+        "precision": 0.5208843954248366,
+        "recall": 0.5403358228719741,
+        "f1": 0.5304318435899436,
+        "iou": 0.36094402377751045
+      }
+    }
+  },
+  "detection": {
+    "mAP@0.25": 0.5886086917697755,
+    "AP_per_class": {
+      "1": 0.5941948284851387,
+      "2": 0.5830225550544121
+    }
+  },
+  "config": {
+    "data_dir": "C:/Users/arge.ortak/Desktop/Lens/Datasets/Lens_Kabin_Aralik_CNN",
+    "output_dir": "checkpoints",
+    "num_classes": 3,
+    "num_seg_classes": 3,
+    "pretrained": true,
+    "trainable_layers": 3,
+    "epochs": 100,
+    "batch_size": 32,
+    "lr": 0.0001,
+    "weight_decay": 0.0001,
+    "lr_step": 10,
+    "lr_gamma": 0.1,
+    "lambda_seg": 1.0,
+    "image_size": 1024,
+    "num_workers": 4,
+    "seed": 42,
+    "amp": true,
+    "resume": null,
+    "save_freq": 5,
+    "log_freq": 10
+  },
+  "class_names": {
+    "0": "-cizik-siyah_nokta-",
+    "1": "cizik",
+    "2": "siyah_nokta"
+  }
+}

@@ -1,0 +1,404 @@
+{
+  "config": {
+    "dataset_path": "C:\\Users\\arge.ortak\\Desktop\\Lens\\merged_coco_dataset_v2",
+    "backbone": "resnet101",
+    "num_epochs": 75,
+    "batch_size": 8,
+    "learning_rate": 0.0005,
+    "weight_decay": 1e-05,
+    "num_classes": 8,
+    "train_samples": 11088,
+    "val_samples": 1886,
+    "test_samples": 1932,
+    "early_stop_patience": 15,
+    "early_stop_min_delta": 0.0005,
+    "random_seed": 42,
+    "device": "cuda",
+    "optimizer": {
+      "name": "AdamW",
+      "lr": 0.0004728061277849978,
+      "weight_decay": 1e-05,
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "momentum": null
+    },
+    "scheduler": {
+      "name": "CosineAnnealingWarmRestarts",
+      "mode": null,
+      "factor": null,
+      "patience": null,
+      "min_lr": null,
+      "T_max": null,
+      "gamma": null,
+      "step_size": null
+    },
+    "framework": {
+      "torch": "2.5.1+cu121",
+      "torchvision": "0.20.1+cu121"
+    }
+  },
+  "training_time": {
+    "start_time": "2025-11-17 11:26:39",
+    "end_time": "2025-11-18 02:43:38",
+    "total_duration": 916.9729609092077,
+    "avg_epoch_time": 25.47147113636688
+  },
+  "training_progress": {
+    "completed_epochs": 36,
+    "best_val_f1": 0.29890373139475435,
+    "best_epoch": 21,
+    "early_stopped": true,
+    "val_f1_history": [
+      0.08103041154411707,
+      0.24056603210281235,
+      0.10010254094856556,
+      0.1666734737397413,
+      0.18230399894669722,
+      0.22735248680535047,
+      0.28126410717384104,
+      0.24294380516552205,
+      0.2872066502842087,
+      0.2921188335781388,
+      0.25700071714111783,
+      0.17903978278046764,
+      0.2336131463754895,
+      0.10828214120008643,
+      0.15973006336082338,
+      0.27340229981097236,
+      0.25834294111396666,
+      0.22398007580500193,
+      0.25214479559367375,
+      0.20713791469775322,
+      0.29890373139475435,
+      0.28457481133533447,
+      0.2661851637611198,
+      0.2691749789090143,
+      0.27092482120223516,
+      0.2610202752640088,
+      0.2874935752289589,
+      0.27545459901135555,
+      0.2810775883156513,
+      0.27722050337575993,
+      0.19694652128876014,
+      0.2253480031531132,
+      0.2620037507510984,
+      0.26120301690138054,
+      0.23120666105694587,
+      0.22118329647050583
+    ]
+  },
+  "loss_history": [
+    {
+      "loss_classifier": 0.049304781173534616,
+      "loss_box_reg": 0.013675493867097523,
+      "loss_mask": 0.5353512868048653,
+      "loss_objectness": 0.292674935391928,
+      "loss_rpn_box_reg": 0.2020695400377265,
+      "total_loss": 1.0930760369930432
+    },
+    {
+      "loss_classifier": 0.03416503053346668,
+      "loss_box_reg": 0.019215905961228137,
+      "loss_mask": 0.4445568078868145,
+      "loss_objectness": 0.25981893728004735,
+      "loss_rpn_box_reg": 0.1698873447883245,
+      "total_loss": 0.9276440262278437
+    },
+    {
+      "loss_classifier": 0.034510541117305275,
+      "loss_box_reg": 0.02205697534789849,
+      "loss_mask": 0.42800179750673356,
+      "loss_objectness": 0.23937831510229285,
+      "loss_rpn_box_reg": 0.15583297559752265,
+      "total_loss": 0.8797806046397827
+    },
+    {
+      "loss_classifier": 0.03382750552196007,
+      "loss_box_reg": 0.02357580794563163,
+      "loss_mask": 0.416630641077504,
+      "loss_objectness": 0.22964249119366834,
+      "loss_rpn_box_reg": 0.14978701531252733,
+      "total_loss": 0.8534634610017141
+    },
+    {
+      "loss_classifier": 0.03364693743954876,
+      "loss_box_reg": 0.024052736513485627,
+      "loss_mask": 0.4080804893357241,
+      "loss_objectness": 0.2170640451868547,
+      "loss_rpn_box_reg": 0.14294348833249265,
+      "total_loss": 0.8257876964229526
+    },
+    {
+      "loss_classifier": 0.03284692140914296,
+      "loss_box_reg": 0.025255250465410425,
+      "loss_mask": 0.39647412826918593,
+      "loss_objectness": 0.20352592413591875,
+      "loss_rpn_box_reg": 0.1343073219404936,
+      "total_loss": 0.792409548468748
+    },
+    {
+      "loss_classifier": 0.03239962917653116,
+      "loss_box_reg": 0.026744802934412223,
+      "loss_mask": 0.3868556421943557,
+      "loss_objectness": 0.19293889293680974,
+      "loss_rpn_box_reg": 0.1281585857127007,
+      "total_loss": 0.7670975540150468
+    },
+    {
+      "loss_classifier": 0.031367364962428035,
+      "loss_box_reg": 0.026256750597866134,
+      "loss_mask": 0.37842268659094885,
+      "loss_objectness": 0.18066284901759497,
+      "loss_rpn_box_reg": 0.12063925482956275,
+      "total_loss": 0.7373489042553206
+    },
+    {
+      "loss_classifier": 0.031111027580090565,
+      "loss_box_reg": 0.02615207082415123,
+      "loss_mask": 0.3701566881668172,
+      "loss_objectness": 0.16700523555773333,
+      "loss_rpn_box_reg": 0.11612897203656647,
+      "total_loss": 0.7105539942544604
+    },
+    {
+      "loss_classifier": 0.030394792590024217,
+      "loss_box_reg": 0.02689615718819712,
+      "loss_mask": 0.363753548313959,
+      "loss_objectness": 0.15867004235521023,
+      "loss_rpn_box_reg": 0.1112894357644387,
+      "total_loss": 0.6910039759516544
+    },
+    {
+      "loss_classifier": 0.0333460816948219,
+      "loss_box_reg": 0.0237611933535907,
+      "loss_mask": 0.4049834845020486,
+      "loss_objectness": 0.21432681004872914,
+      "loss_rpn_box_reg": 0.14481027182299122,
+      "total_loss": 0.8212278417565606
+    },
+    {
+      "loss_classifier": 0.033461290718060296,
+      "loss_box_reg": 0.02334067051611772,
+      "loss_mask": 0.40235824994796626,
+      "loss_objectness": 0.2119178157380391,
+      "loss_rpn_box_reg": 0.1447000732970616,
+      "total_loss": 0.8157780998067938
+    },
+    {
+      "loss_classifier": 0.03334647644120356,
+      "loss_box_reg": 0.024278889323038483,
+      "loss_mask": 0.3963525570918299,
+      "loss_objectness": 0.2095093342433932,
+      "loss_rpn_box_reg": 0.1432163255103739,
+      "total_loss": 0.8067035833521495
+    },
+    {
+      "loss_classifier": 0.03272830479755503,
+      "loss_box_reg": 0.024350409169545638,
+      "loss_mask": 0.3932686240061537,
+      "loss_objectness": 0.20234521626512295,
+      "loss_rpn_box_reg": 0.14038470492686156,
+      "total_loss": 0.7930772588366554
+    },
+    {
+      "loss_classifier": 0.032564475680170596,
+      "loss_box_reg": 0.024144158096257314,
+      "loss_mask": 0.3929517822498711,
+      "loss_objectness": 0.1967364015141005,
+      "loss_rpn_box_reg": 0.1379015007994338,
+      "total_loss": 0.7842983188696238
+    },
+    {
+      "loss_classifier": 0.032424470013636464,
+      "loss_box_reg": 0.02428613136022751,
+      "loss_mask": 0.3888116539341719,
+      "loss_objectness": 0.19177804307536386,
+      "loss_rpn_box_reg": 0.13525799420644755,
+      "total_loss": 0.7725582926562338
+    },
+    {
+      "loss_classifier": 0.03219058677758403,
+      "loss_box_reg": 0.023937949232232258,
+      "loss_mask": 0.38749316980871457,
+      "loss_objectness": 0.18717001373966966,
+      "loss_rpn_box_reg": 0.1332315109242802,
+      "total_loss": 0.7640232296303066
+    },
+    {
+      "loss_classifier": 0.03211770336779337,
+      "loss_box_reg": 0.025602588695892468,
+      "loss_mask": 0.3799897534786193,
+      "loss_objectness": 0.17920324480507796,
+      "loss_rpn_box_reg": 0.12955150498053083,
+      "total_loss": 0.7464647959235082
+    },
+    {
+      "loss_classifier": 0.031604927624165904,
+      "loss_box_reg": 0.02557584207593609,
+      "loss_mask": 0.37711990096782366,
+      "loss_objectness": 0.17282201673883896,
+      "loss_rpn_box_reg": 0.12506425117033643,
+      "total_loss": 0.7321869378740137
+    },
+    {
+      "loss_classifier": 0.03148752008128003,
+      "loss_box_reg": 0.025537979499213218,
+      "loss_mask": 0.37406570143986917,
+      "loss_objectness": 0.1667532351749585,
+      "loss_rpn_box_reg": 0.12246296953018164,
+      "total_loss": 0.7203074080001396
+    },
+    {
+      "loss_classifier": 0.031202904868623697,
+      "loss_box_reg": 0.025975386683532966,
+      "loss_mask": 0.3696559438049191,
+      "loss_objectness": 0.15641810502830092,
+      "loss_rpn_box_reg": 0.11744651163008983,
+      "total_loss": 0.7006988520015026
+    },
+    {
+      "loss_classifier": 0.031104454381625245,
+      "loss_box_reg": 0.02629967731324238,
+      "loss_mask": 0.3639334827489495,
+      "loss_objectness": 0.1516272576383354,
+      "loss_rpn_box_reg": 0.11405684249905647,
+      "total_loss": 0.687021715364931
+    },
+    {
+      "loss_classifier": 0.03078165351484417,
+      "loss_box_reg": 0.026648287297680727,
+      "loss_mask": 0.3593296291895243,
+      "loss_objectness": 0.14397665297056172,
+      "loss_rpn_box_reg": 0.11053512410178759,
+      "total_loss": 0.6712713481328876
+    },
+    {
+      "loss_classifier": 0.03013176317320005,
+      "loss_box_reg": 0.02585475789692151,
+      "loss_mask": 0.35450751208639764,
+      "loss_objectness": 0.13637206122456563,
+      "loss_rpn_box_reg": 0.10780908362026102,
+      "total_loss": 0.6546751797672302
+    },
+    {
+      "loss_classifier": 0.030047968065589237,
+      "loss_box_reg": 0.026253068569558585,
+      "loss_mask": 0.3507570421691409,
+      "loss_objectness": 0.1268555113029751,
+      "loss_rpn_box_reg": 0.1033868095911448,
+      "total_loss": 0.6373004002703561
+    },
+    {
+      "loss_classifier": 0.029965172952153916,
+      "loss_box_reg": 0.026086493192977872,
+      "loss_mask": 0.34496161923307017,
+      "loss_objectness": 0.12099839394581524,
+      "loss_rpn_box_reg": 0.10098563646259322,
+      "total_loss": 0.622997317027736
+    },
+    {
+      "loss_classifier": 0.02970207271416111,
+      "loss_box_reg": 0.02691099456742095,
+      "loss_mask": 0.34245413577272776,
+      "loss_objectness": 0.11006193472983646,
+      "loss_rpn_box_reg": 0.0960376129309616,
+      "total_loss": 0.6051667509721471
+    },
+    {
+      "loss_classifier": 0.02929940071524071,
+      "loss_box_reg": 0.02626713022738741,
+      "loss_mask": 0.3405396150261121,
+      "loss_objectness": 0.10505539076846271,
+      "loss_rpn_box_reg": 0.09456803609514917,
+      "total_loss": 0.5957295740235592
+    },
+    {
+      "loss_classifier": 0.02914446158856046,
+      "loss_box_reg": 0.026692956741899358,
+      "loss_mask": 0.33748311165607336,
+      "loss_objectness": 0.10138442629778927,
+      "loss_rpn_box_reg": 0.09162271673781704,
+      "total_loss": 0.5863276721122117
+    },
+    {
+      "loss_classifier": 0.02938654058926012,
+      "loss_box_reg": 0.026242917953889985,
+      "loss_mask": 0.33776948349429414,
+      "loss_objectness": 0.09691927586729178,
+      "loss_rpn_box_reg": 0.0914338061925021,
+      "total_loss": 0.5817520252575434
+    },
+    {
+      "loss_classifier": 0.03212645665633601,
+      "loss_box_reg": 0.024417497380949508,
+      "loss_mask": 0.37178982370687597,
+      "loss_objectness": 0.17858557560055116,
+      "loss_rpn_box_reg": 0.12839040270916482,
+      "total_loss": 0.7353097545937198
+    },
+    {
+      "loss_classifier": 0.03217748499006398,
+      "loss_box_reg": 0.025140158598323886,
+      "loss_mask": 0.37388151527139185,
+      "loss_objectness": 0.17073688464182796,
+      "loss_rpn_box_reg": 0.12936678948552813,
+      "total_loss": 0.7313028336818428
+    },
+    {
+      "loss_classifier": 0.03269724665723021,
+      "loss_box_reg": 0.0256779010650925,
+      "loss_mask": 0.3759216902317939,
+      "loss_objectness": 0.16847749816154334,
+      "loss_rpn_box_reg": 0.12787258019267675,
+      "total_loss": 0.7306469168626901
+    },
+    {
+      "loss_classifier": 0.03214233529499986,
+      "loss_box_reg": 0.02479424420980938,
+      "loss_mask": 0.37367887979892084,
+      "loss_objectness": 0.17035859692599867,
+      "loss_rpn_box_reg": 0.12898056949643366,
+      "total_loss": 0.7299546250619241
+    },
+    {
+      "loss_classifier": 0.031727372988531684,
+      "loss_box_reg": 0.024387786770718105,
+      "loss_mask": 0.37658180560900534,
+      "loss_objectness": 0.1759265140693468,
+      "loss_rpn_box_reg": 0.13062372729403987,
+      "total_loss": 0.7392472055610296
+    },
+    {
+      "loss_classifier": 0.031495451494449316,
+      "loss_box_reg": 0.024466826645266008,
+      "loss_mask": 0.37332006972847565,
+      "loss_objectness": 0.17032475279265152,
+      "loss_rpn_box_reg": 0.13021220665386088,
+      "total_loss": 0.7298193074881084
+    }
+  ],
+  "final_metrics": {
+    "validation": {
+      "precision": 0.3306073835552787,
+      "recall": 0.24541371876790669,
+      "f1": 0.28171046412932954,
+      "iou": 0.16394819612226977
+    },
+    "test": {
+      "precision": 0.46613016019101783,
+      "recall": 0.3154964672066983,
+      "f1": 0.3762983802301725,
+      "iou": 0.23175340935703911
+    }
+  },
+  "model_info": {
+    "model_path": "Modeller\\MaskRCNN_COCO_merged_v2.pt",
+    "file_size_mb": 240.92802238464355,
+    "architecture": "MaskRCNN(resnet101)",
+    "total_params": 62894591,
+    "trainable_params": 62672191,
+    "non_trainable_params": 222400
+  }
+}

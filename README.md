@@ -6,8 +6,9 @@ Lens üretiminde yüzey hatalarının (çizik, siyah nokta vb.) otomatik tespiti
 
 - **RT-DETR Ensemble Model**: Çizik ve siyah nokta tespiti için özelleştirilmiş iki modelin ağırlıklı ensemble birleşimi
 - **Çoklu Kamera Desteği**: 4 kamera ile eş zamanlı görüntü yakalama
-- **Gerçek Zamanlı Analiz**: PyQt5 tabanlı kullanıcı arayüzü ile canlı tespit
-- **Otomatik Veri Toplama**: Focus taraması ile optimum görüntü yakalama
+- **Sağ/Sol Parça Desteği**: İki farklı ürün yönü için özel kamera ayar profilleri (Parlaklık, kontrast, focus vb.)
+- **Otomatik Veri Toplama**: Focus taraması (±5) ile en net görüntülerin yakalanması ve RAW dizinine kaydedilmesi
+- **Toplu Analiz (Batch Analysis)**: Kaydedilen ham (RAW) görüntüler üzerinden arayüzden tek tuşla ensemble analizi ve sonuçların CSV (analysis_metrics.csv) formatında raporlanması
 - **YOLO & Mask R-CNN**: Alternatif model eğitimi ve değerlendirme
 
 ---
@@ -113,8 +114,8 @@ mkdir -p training_plots
 
 ```
 Lens_defect_detection/
-├── kamera/                          # Kamera uygulamaları
-│   ├── data_collector_qt_ensemble.py   # Ana veri toplama uygulaması
+├── data_collector_qt_ensemble_final.py # Ana veri toplama ve analiz uygulaması
+├── kamera/                          # Kamera ayar modülleri
 │   └── camera_ayar.py                  # Kamera ayarları
 │
 ├── RT_Detr_Ensemble/               # RT-DETR Ensemble (model/ klasörü eksik)
@@ -139,12 +140,12 @@ Lens_defect_detection/
 
 ## 🎯 Kullanım
 
-### Veri Toplama Uygulaması (Kamera Gerektirir)
+### Veri Toplama ve Analiz Uygulaması (Kamera Gerektirir)
 ```powershell
-python kamera/data_collector_qt_ensemble.py
+python data_collector_qt_ensemble_final.py
 ```
 
-> ⚠️ **Not**: Bu uygulama 4 USB kamera ve eğitilmiş model dosyalarını gerektirir.
+> ⚠️ **Not**: Bu uygulama 4 USB kamera ve eğitilmiş model dosyalarını gerektirir. Model ağırlıkları olmadan veri toplayabilir, ancak analiz için (RAW -> Analyzed) modellerin indirilmiş olması gerekir. Arayüzden "Sağ" veya "Sol" seçerek farklı kamera ayarlarını uygulayabilirsiniz.
 
 ### Model Eğitimi
 
@@ -175,7 +176,7 @@ python Model_test/Yeni/yolo_test.py
 
 ### Model Yollarını Güncelleme
 
-`kamera/data_collector_qt_ensemble.py` dosyasında model yollarını kendi sisteminize göre güncelleyin:
+`data_collector_qt_ensemble_final.py` dosyasında model yollarını kendi sisteminize göre güncelleyin:
 
 ```python
 # Satır 25-26

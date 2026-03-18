@@ -1,0 +1,39 @@
+================================================================================
+MASK R-CNN EĞİTİM SONUÇLARI
+================================================================================
+
+EĞİTİM KONFİGÜRASYONU:
+----------------------------------------
+Veri Seti: C:/Users/arge.ortak/Desktop/Lens/merged_coco_dataset_v3
+Backbone: resnet101
+Epoch Sayısı: 75
+Batch Size: 4
+Learning Rate: 0.0002
+Weight Decay: 5e-05
+Sınıf Sayısı: 4
+Train Örnek Sayısı: 9501
+Validation Örnek Sayısı: 1675
+Test Örnek Sayısı: 1811
+Seed: 42
+Cihaz: cuda
+Optimizer: AdamW (lr=5e-05, weight_decay=5e-05, betas=(0.9, 0.999))
+LR Scheduler: ReduceLROnPlateau (mode=max, factor=0.5, patience=10)
+PyTorch: 2.5.1+cu121, Torchvision: 0.20.1+cu121
+
+EĞİTİM SÜRESİ:
+----------------------------------------
+Başlangıç Zamanı: 2025-11-19 08:50:19
+Bitiş Zamanı: 2025-11-19 18:20:45
+Toplam Süre: 570.44 dakika
+Epoch Başına Ortalama: 22.82 dakika
+
+EĞİTİM İLERLEMESİ:
+----------------------------------------
+Tamamlanan Epoch: 25
+En İyi Validation F1: 0.4321
+En İyi Epoch: 16
+Early Stopping: Evet
+
+FİNAL METRİKLER:
+----------------------------------------
+VALIDATION SET:
